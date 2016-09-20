@@ -1916,7 +1916,7 @@ declare namespace  __React {
          * The navigation view that will be rendered to the side of the
          * screen and can be pulled in.
          */
-        renderNavigationView?: () => View
+        renderNavigationView?: () => JSX.Element
 
         /**
          * Make the drawer take the entire screen and draw the background of
@@ -1929,6 +1929,15 @@ declare namespace  __React {
     }
 
     export interface DrawerLayoutAndroidStatic extends React.ComponentClass<DrawerLayoutAndroidProperties> {
+
+        /**
+         * Specifies the side of the screen from which the drawer will slide in.
+         * enum(DrawerConsts.DrawerPosition.Left, DrawerConsts.DrawerPosition.Right)
+         */	
+        positions: { 
+            Left: number;
+            Right: number;
+        }
 
         /**
          * Opens the drawer.
